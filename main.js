@@ -1,16 +1,20 @@
 const { app, Menu, BrowserWindow, Tray, nativeTheme, nativeImage } = require('electron')
-
+var path = require('path');
 
 function createWindow(win){
   nativeTheme.themeSource = "dark"
+  var appIconPath = path.join(__dirname, 'resources', 'black_monitor_outline.png');
+
   win = new BrowserWindow({
-    width: 800,
+    width: 600,
     height: 160,
     show: false,
     frame: false,
     webPreferences: {
       nodeIntegration: true
-    }
+    },
+    
+    icon: path.join(__dirname, "resources", "black_monitor_outline.png")
   })
   win.removeMenu()
   // and load the index.html of the app.
@@ -29,8 +33,16 @@ app.on('window-all-closed', function() {
   console.log("All windows are closed.")
 });
 
+if (nativeTheme.shouldUseDarkColors){
+  var icon_name = "monitor_outline.png"
+} else {
+  var icon_name = "black_monitor_outline.png"
+}
+var iconPath = path.join(__dirname, 'resources', icon_name);
+
 app.on('ready', () => {
-  const trayIcon = nativeImage.createFromPath('resources/monitor_outline.png');
+  
+  const trayIcon = nativeImage.createFromPath(iconPath);
   tray = new Tray(trayIcon)
   const contextMenu = Menu.buildFromTemplate([
     { label: 'Exit', type: 'normal', role:"quit"},
