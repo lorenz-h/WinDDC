@@ -1,0 +1,48 @@
+@import '../node_modules/material-design-icons/iconfont/material-icons.css';
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;  
+    background: rgb(60,60,60);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: rgb(180,180,180);
+    cursor: pointer;
+  }
+  
+  body {
+      overflow: hidden;
+      padding-top:0px;
+      margin: 0px;
+      background-color:rgb(28,28,28);
+      color: rgb(230,230,230);
+      font-family: sans-serif;
+      
+  }
+  body p {
+    font-weight: 100;
+    font-size:1.4em;
+    margin: 0, 0, 0, 0!important;
+    margin-top: 0px;
+  }
+
+  #menu_bar {
+    background: rgb(60,60,60);
+    width: 100%;
+    height:1.5em;
+  }
+
+  #close_btn {
+    float: right
+  }
