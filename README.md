@@ -3,7 +3,7 @@ A simple tray application for Windows to control the brightness of external moni
 entirely and only created once the user clicks the systray icon in an attempt to save resources.
 
 ## Screenshot
-![screenshot][resources/screenshot.png]
+![screenshot](resources/screenshot.png)
 
 ## Building
 ``` shell
