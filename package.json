@@ -10,8 +10,8 @@
     "dist": "electron-builder"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/lorenz-h/WinDDC.git"
+    "type": "git",
+    "url": "https://github.com/lorenz-h/WinDDC.git"
   },
   "author": "Lorenz Hetzel",
   "license": "ISC",
@@ -22,10 +22,17 @@
   },
   "dependencies": {
     "@hensm/ddcci": "0.0.3",
-    "material-design-icons": "^3.0.1"
+    "bulma": "^0.8.1",
+    "bulma-slider": "^2.0.0",
+    "material-design-icons": "^3.0.1",
+    "mustache": "^4.0.1"
   },
   "build": {
-    "files": ["**/*", "build/icon.*", "resources/*"],
+    "files": [
+      "**/*",
+      "build/icon.*",
+      "resources/*"
+    ],
     "appId": "com.hetzel.winddc",
     "productName": "WinDDC",
     "copyright": "Copyright © 2020 Lorenz Hetzel",

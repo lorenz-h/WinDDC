@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>WinDDC</title>
+</head>
+<style>
+    @import '../node_modules/material-design-icons/iconfont/material-icons.css';
+    @import "../node_modules/bulma/css/bulma.css";
+    @import '../node_modules/bulma-slider/dist/css/bulma-slider.min.css';
+
+    .slider-label{
+        margin-right: 2em;
+    }
+    .control-section{
+        margin-right:2em;
+        padding-top:1.5rem;
+        padding-bottom:1.5rem;
+    }
+    .restore_btn{
+        margin-left:1em;
+    }
+</style>
+<body>
+    <div id="monitor_controls_wrapper">
+        <script id="monitor_control_item_template" type="text/template">
+            <div class="section control-section">
+                <p class="title">Monitor {{id}} <i id="restore_{{id}}" class="is-black material-icons restore_btn">restore</i></p>
+                <div class="columns is-vcentered is-mobile">
+                    <div class="column is-one-fifth slider-label">Brightness</div>
+                    <input class="column slider is-four-fifths is-large is-circle"  type="range" min="1" max="100" value="50" id="brighness_slider_{{id}}">
+                </div>
+                <div class="columns is-vcentered is-mobile">
+                    <div class="column is-one-fifth slider-label">Contrast</div>
+                    <input class="column slider is-four-fifths is-large is-circle"  type="range" min="1" max="100" value="50" id="contrast_slider_{{id}}">
+                </div>
+            </div>
+        </script>
+    </div>
+    <script src="./render.js"></script>
+
+
+    
+</body>
+</html> 
