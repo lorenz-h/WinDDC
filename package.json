@@ -1,6 +1,6 @@
 {
   "name": "winddc",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "a gui to control your external monitors brightness",
   "main": "main.js",
   "scripts": {
