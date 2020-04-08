@@ -59,10 +59,10 @@ class MonitorControls{
 
     create_dom(){
         let template = document.getElementById("monitor_control_item_template").innerHTML;
-        let html_string = Mustache.render(template, {name: this.name, id: this.id});
+        let htmlString = Mustache.render(template, {name: this.name, id: this.id});
 
         let dom = document.createElement("div");
-        dom.innerHTML = html_string;
+        dom.innerHTML = htmlString;
         dom.classList.add("monitor_controls_item");
         return dom
     }
